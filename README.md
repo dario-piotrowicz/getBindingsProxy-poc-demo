@@ -6,7 +6,7 @@
 ## The `getBindingsProxy` function
 
 The function is used to get a proxy for the workerd bindings that can be then passed to user code
-running in Nodejs processes. It spins up Miniflare under the hood and implements various logic (or reuses wrangle logic) that developers (or frameworks) would have to instead implement themselves.
+running in Nodejs processes. It spins up Miniflare under the hood and implements various logic (or reuses wrangle logic) that developers (or framework authors) would have to instead implement themselves.
 
 This utility allows anyone to easily get bindings that integrate well with wrangler without having to reinvent the wheel (such as reading the toml file and communicate with the wrangler local registry).
 
