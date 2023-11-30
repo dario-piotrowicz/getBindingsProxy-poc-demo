@@ -1,5 +1,8 @@
 # POC Demo for the new wrangler `getBindingsProxy` API
 
+> [!note]
+> This demo uses the wrangler prerelease generated in [workers-sdk#4523](https://github.com/cloudflare/workers-sdk/pull/4523)
+
 ## The `getBindingsProxy` function
 
 The function is used to get a proxy for the workerd bindings that can be then passed to user code
@@ -67,3 +70,22 @@ in this case the output should be:
     Message from do_worker = [wrangler] Couldn't find `wrangler dev` session for class "DurableObjectClass" to proxy to
 ```
 note that in this case the durable objects integration is implemented but no durable object workers was found in the local registry.
+
+To get a valid message from the do_worker, in a separate terminal run
+```sh
+pnpm start:do
+```
+
+then (while the above process is still running) running
+```sh
+pnpm start:worker
+```
+should generate the following output:
+```
+    MY_VARIABLE = production_value_from_toml
+
+    # kv entries in MY_KV_FROM_TOML = 0
+
+    Message from do_worker = Hello from DurableObject!
+```
+showcasing the fact that now the function has successfully found the worker in the local registry and created a proxy to its durableObject class.
