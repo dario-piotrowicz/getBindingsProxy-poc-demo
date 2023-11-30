@@ -1,0 +1,18 @@
+{
+  "name": "getBindingsProxy-poc-demo",
+  "version": "1.0.0",
+  "description": "",
+  "workspaces": [
+    "demo",
+    "do_worker"
+  ],
+  "main": "index.js",
+  "scripts": {
+    "start:do": "pnpm --filter do_worker start",
+    "start:worker": "pnpm --filter demo worker",
+    "start:pages": "pnpm --filter demo pages"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

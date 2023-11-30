@@ -1,0 +1,19 @@
+{
+	"name": "demo",
+	"private": true,
+	"type": "module",
+	"scripts": {
+		"worker": "node --loader ts-node/esm index.worker.ts",
+		"pages": "node --loader ts-node/esm index.pages.ts"
+	},
+	"dependencies": {
+		"ts-node": "^10.9.1",
+		"typescript": "^5.1.6",
+		"wrangler": "https://prerelease-registry.devprod.cloudflare.dev/workers-sdk/runs/7035859586/npm-package-wrangler-4523"
+	},
+	"devDependencies": {
+		"@tsconfig/strictest": "^2.0.0",
+		"@types/node": "^20.4.2",
+		"@cloudflare/workers-types": "^4.20231121.0"
+	}
+}
