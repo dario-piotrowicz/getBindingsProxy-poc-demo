@@ -9,8 +9,7 @@
   "main": "index.js",
   "scripts": {
     "start:do": "pnpm --filter do_worker start",
-    "start:worker": "pnpm --filter demo worker",
-    "start:pages": "pnpm --filter demo pages"
+    "start:demo": "pnpm --filter demo worker"
   },
   "keywords": [],
   "author": "",
