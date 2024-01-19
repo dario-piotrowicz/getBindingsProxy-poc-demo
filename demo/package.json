@@ -3,8 +3,7 @@
 	"private": true,
 	"type": "module",
 	"scripts": {
-		"worker": "node --loader ts-node/esm index.worker.ts",
-		"pages": "node --loader ts-node/esm index.pages.ts"
+		"start": "node --loader ts-node/esm index.ts"
 	},
 	"dependencies": {
 		"ts-node": "^10.9.1",
